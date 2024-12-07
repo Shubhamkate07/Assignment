@@ -1,0 +1,41 @@
+.buybook-container {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .book-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+  }
+  
+  .book-item {
+    width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+  }
+  
+  .book-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .buy-button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .buy-button:hover {
+    background-color: #45a049;
+  }
+  
