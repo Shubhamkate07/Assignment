@@ -20,7 +20,12 @@ const Signup = () => {
         email,
         password,
       });
-
+if(response.data.message==='User registered successfully'){
+    setUsername('');
+    setEmail('');
+    setPassword('');
+    alert('User registered successfully')
+}
       setSuccess(response.data.message);
       setError('');
     } catch (err) {
