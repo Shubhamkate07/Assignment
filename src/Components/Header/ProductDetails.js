@@ -17,7 +17,7 @@ const ProductDetails = () => {
 
   return (
     <div className="product-details">
-      <img src={particularBook.cover_image} alt={particularBook.title} />
+      <img src={'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSZXRzEBJHBDv1vNlkUO-yBvkBTXXYUE1K0ptQLvopWQFNn3W7F'} alt={particularBook.title} />
       <h3>{particularBook.title}</h3>
       <p><strong>Author:</strong> {particularBook.author}</p>
       <p><strong>Year of Publication:</strong> {particularBook.publication_year}</p>

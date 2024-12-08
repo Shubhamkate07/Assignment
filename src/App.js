@@ -23,9 +23,9 @@ const App = () => {
 
 
 {/* used api and fetch data of book */}
-    {/* <Route path='/' element={<Home/>}/> */}
-    <Route path='/' element={<Login/>}/>
-    <Route path='/item' element={<Items/>}/>
+    <Route path='/' element={<Home/>}/>
+    {/* <Route path='/' element={<Login/>}/> */}
+    {/* <Route path='/item' element={<Items/>}/> */}
     <Route path='/signup' element={<Signup/>}/>
     <Route path='/bookid/:id' element={<ProductDetails/>}/>
     <Route path='/about' element={<About/>}/>
