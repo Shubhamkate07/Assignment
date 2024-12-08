@@ -16,7 +16,7 @@ const Signup = () => {
 
     try {
       // Send POST request to backend for registration
-      const response = await axios.post('http://127.0.0.1:5000/register', {
+      const response = await axios.post('https://assignment-07.onrender.com/register', {
         username,
         email,
         password,
