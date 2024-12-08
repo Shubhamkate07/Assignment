@@ -19,7 +19,7 @@ const Login = () => {
 
     try {
       // Send POST request to backend
-      const response = await axios.post('http://127.0.0.1:5000/signin', {
+      const response = await axios.post('https://assignment-07.onrender.com:5000/signin', {
         email,
         password,
       });
