@@ -3,30 +3,28 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import '../Signup/Signup.css';
 const Signup = () => {
-  // State to hold form input values
+  
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
 
-  // Handle form submission
   const handleSubmit = async (e) => {
-    e.preventDefault(); // Prevent default form submission behavior
+    e.preventDefault(); 
 
     try {
-      // Send POST request to backend for registration
-      const response = await axios.post('http://127.0.0.1:5000/register', {
+ 
+      const response = await axios.post('https://assignment-07.onrender.com/register', {
         username,
         email,
         password,
       });
 
-      // Handle successful registration
       setSuccess(response.data.message);
       setError('');
     } catch (err) {
-      // Handle error (e.g., user already exists or server error)
+      
       setError(err.response ? err.response.data.message : 'Server error');
       setSuccess('');
     }
@@ -36,11 +34,8 @@ const Signup = () => {
     <div className="signup-container">
       <h2>Signup</h2>
 
-      {/* Display success or error messages */}
       {error && <div style={{ color: 'red' }}>{error}</div>}
-      {success && <div style={{ color: 'green' }}>{success}</div>}
 
-      {/* Signup Form */}
       <form onSubmit={handleSubmit}>
         <div>
           <label>Username:</label>
@@ -69,11 +64,11 @@ const Signup = () => {
             required
           />
         </div>
-        <button type="submit">Sign Up</button>
+        <button type="submit" >Sign Up</button>
       </form>
 
       <Link to="/">
-        <p>Login</p>
+        <p className='para'>Login</p>
       </Link>
     </div>
   );

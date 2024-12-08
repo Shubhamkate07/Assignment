@@ -95,22 +95,21 @@
     color: #777;
   }
 
-
-  @media(max-width:470px){
-    .text1{
-      width: 90%; /* Set the width of the input field */
-      padding: 6px; /* Add some padding for better spacing inside the field */
-      font-size: 14px; /* Adjust the font size */
-      border: 2px solid #ccc; /* Define a border style */
-      border-radius: 5px; /* Round the corners of the input box */
-      outline: none; /* Remove the outline when focused */
-      transition: border-color 0.3s; /* Smooth transition for the border color */
+  @media (max-width: 470px) {
+    .text1 {
+      width: 90%;
+      padding: 6px;
+      font-size: 14px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      outline: none;
+      transition: border-color 0.3s;
       margin-left: 10px;
     }
-    
+  
     .text1:focus {
-      border-color: #007BFF; /* Change the border color when the input field is focused */
-      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Add a subtle shadow effect on focus */
+      border-color: #007BFF;
+      box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
     }
   }
   
