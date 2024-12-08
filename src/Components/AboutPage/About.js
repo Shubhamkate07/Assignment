@@ -1,5 +1,6 @@
 import React from 'react';
-import '../AboutPage/About.css'; // Add styling
+import './About.css'; 
+import { Link } from 'react-router-dom';
 
 const About = () => {
   return (
@@ -35,7 +36,7 @@ const About = () => {
 
       <section className="about-section">
         <h2>Contact</h2>
-        <p>If you have any questions or need support, feel free to <a href="/contact">contact us</a>.</p>
+        <p>If you have any questions or need support, feel free to <Link to="/contact">contact us</Link>.</p>
       </section>
     </div>
   );

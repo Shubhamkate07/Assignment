@@ -13,8 +13,8 @@ const Home = () => {
       try {
         const url = await fetch(`https://www.freetestapi.com/api/v1/books?limit=50`);
         const data = await url.json();
-        console.log("Fetched data:", data); // Debug log
-        setBooks(data); // Adjust if API structure differs
+        console.log("Fetched data:", data); 
+        setBooks(data); 
         setData(data);
       } catch (error) {
         console.error("Error fetching books:", error);
@@ -25,14 +25,6 @@ const Home = () => {
   }, []);
 
 
-
-// const handleNext=()=>{
-  
-// }
-  
-// const handlePre=()=>{
-  
-// }
   
 const changeHandler = (e) => {
   const value=e.target.value.toLowerCase();
@@ -66,13 +58,10 @@ setBooks(searchedData);
             <Items key={index} book={book} books={books} setBooks={setBooks} />
           ))
         ) : (
-          <p>No books available</p> // Show a message if no books are fetched
+          <p>No books available</p> 
         )}
       </div>
-      {/* <div className="btn">
-      <button onClick={handleNext}>Next</button>
-      <button onClick={handlePre}>Previous</button>
-      </div> */}
+    
     </div>
   );
 };

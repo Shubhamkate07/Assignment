@@ -1,101 +1,117 @@
-/* Styles for the item card */
+/* Item.css */
+
+/* Container for the items */
+.items-container {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Search bar styling */
+.search-bar {
+  width: 100%;
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Book list grid layout */
+.books-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+/* Individual item card styling */
 .item-card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 20px;
-    width: 220px;
-    text-align: center;
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .item-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  /* Styles for the image */
-  .item-image {
-    width: 85%;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s ease;
-  }
-  
-  .item-card:hover .item-image {
-    transform: scale(1.01); /* Image zoom effect */
-  }
-  
-  /* Styles for text content */
-  .item-title {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 10px;
-  }
-  
-  .item-author,
-  .item-year {
-    font-size: 14px;
-    color: #555;
-  }
-  
-  .item-description {
-    font-size: 13px;
-    color: #777;
-    margin-top: 10px;
-    line-height: 1.4;
-  }
-  
-  .item-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-  }
-  
-  .update-button,
-  .delete-button {
-    padding: 8px 16px;
-    font-size: 14px;
-    font-weight: bold;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s;
-  }
-  
-  /* Update Button Styles */
-  .update-button {
-    background-color: #4caf50; /* Green background */
-    color: white; /* White text */
-    position: relative;
-  }
-  
-  .update-button:hover {
-    background-color: #45a049; /* Darker green on hover */
-    transform: scale(1.05); /* Slightly enlarge */
-  }
-  
-  .update-button:active {
-    background-color: #3e8e41; /* Even darker green on click */
-    transform: scale(0.98); /* Slightly shrink on click */
-  }
-  
-  /* Delete Button Styles */
-  .delete-button {
-    background-color: #f44336; /* Red background */
-    color: white; /* White text */
-  }
-  
-  .delete-button:hover {
-    background-color: #d32f2f; /* Darker red on hover */
-    transform: scale(1.05); /* Slightly enlarge */
-  }
-  
-  .delete-button:active {
-    background-color: #b71c1c; /* Even darker red on click */
-    transform: scale(0.98); /* Slightly shrink on click */
-  }
-  
+  background-color: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.item-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Item image styling */
+.item-image {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Item title styling */
+.item-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  color: #333;
+}
+
+/* Author and publication year */
+.item-author,
+.item-year {
+  font-size: 14px;
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Description */
+.item-description {
+  font-size: 14px;
+  color: #444;
+  margin: 10px 0;
+  line-height: 1.4;
+}
+
+/* Actions container */
+.item-actions {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 15px;
+}
+
+/* Buttons styling */
+.update-button,
+.delete-button {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.update-button {
+  background-color: #4caf50;
+  color: white;
+}
+
+.update-button:hover {
+  background-color: #45a045;
+}
+
+.delete-button {
+  background-color: #f44336;
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: #e53935;
+}

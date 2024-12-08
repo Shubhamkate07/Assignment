@@ -1,5 +1,5 @@
 import React from 'react';
-import './Buybook.css'; // Assuming you have a Buybook.css file for styling
+import '../Buybook/Buybook.css'; 
 
 const Buybook = () => {
   return (
@@ -21,7 +21,6 @@ const Buybook = () => {
           <button className="buy-button">Buy Now</button>
         </div>
 
-        {/* Repeat book items for each book */}
         <div className="book-item">
           <img
             src="https://m.media-amazon.com/images/M/MV5BNzIxMDQ2YTctNDY4MC00ZTRhLTk4ODQtMTVlOWY4NTdiYmMwXkEyXkFqcGc@._V1_.jpg"

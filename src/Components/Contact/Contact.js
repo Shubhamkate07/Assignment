@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../Contact/Contact.css'; // Optional: Style the contact form
+import '../Contact/Contact.css'; 
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -18,19 +18,15 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Simple form validation (can be enhanced)
     if (!formData.name || !formData.email || !formData.message) {
       alert('Please fill out all fields.');
       return;
     }
 
-    // Handle form submission logic (e.g., send data to an API)
     console.log('Form Submitted:', formData);
 
-    // Show success message
     setSubmitted(true);
 
-    // Clear the form
     setFormData({
       name: '',
       email: '',
