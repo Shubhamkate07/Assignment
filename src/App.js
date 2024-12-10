@@ -10,6 +10,7 @@ import PageNotFound from './Components/404/PageNotFound.js'
 import Items from './Components/Header/Items.js'
 import Login from './Components/Login/Login.js'
 import Signup from './Components/Signup/Signup.js'
+import Crud from './Components/CRUD/Crud.js'
 
 const App = () => {
   
@@ -29,6 +30,7 @@ const App = () => {
     <Route path='/about' element={<About/>}/>
     <Route path='/buybook' element={<Buybook/>}/>
     <Route path='/contact' element={<Contact/>}/>
+    <Route path='/crud' element={<Crud/>} />
     <Route path='*' element={<PageNotFound/>}/>
       </Routes>
       </BrowserRouter>
