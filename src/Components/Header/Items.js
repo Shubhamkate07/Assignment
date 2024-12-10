@@ -131,9 +131,11 @@ const Items = () => {
 
   const navigate = useNavigate();
 
-  const handleClick = (bookId) => {
-    navigate(`/bookid/${bookId}`);
+  const handleClick = (id) => {
+    const selectedBook = books.find((book) => book.id === id);
+    navigate(`/bookid/${id}`, { state: { book: selectedBook } }); 
   };
+  
 
   const handleDelete = (e, bookId) => {
     e.stopPropagation();
@@ -151,7 +153,7 @@ const Items = () => {
 
   const handleAddBook = (e) => {
     e.preventDefault();
-    const newBook = { ...form, id: Date.now().toString() };
+    const newBook = { ...form, id: Date.now().toString()};
     setBooks([...books, newBook]);
     resetForm();
   };

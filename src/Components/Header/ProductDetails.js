@@ -1,27 +1,24 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-import '../Header/ProductDetails.css'
+import '../Header/ProductDetails.css';
 
 const ProductDetails = () => {
-  const { id } = useParams();  
-  const location = useLocation(); 
-  const { books } = location.state;  
-  console.log(books);
-  
-  const particularBook = books.find((book) => book.id === parseInt(id));
+  const { id } = useParams();
+  const location = useLocation();
+  const { book } = location.state || {};
 
-  if (!particularBook) {
+  if (!book) {
     return <div>Book not found</div>;
   }
 
   return (
     <div className="product-details">
-      <img src={particularBook.cover_image} alt={particularBook.title} />
-      <h3>{particularBook.title}</h3>
-      <p><strong>Author:</strong> {particularBook.author}</p>
-      <p><strong>Year of Publication:</strong> {particularBook.publication_year}</p>
-      <p><strong>Description:</strong> {particularBook.description}</p>
+      <img src={book.cover_image} alt={book.title} />
+      <h3>{book.title}</h3>
+      <p><strong>Author:</strong> {book.author}</p>
+      <p><strong>Year of Publication:</strong> {book.publication_year}</p>
+      <p><strong>Description:</strong> {book.description}</p>
     </div>
   );
 };

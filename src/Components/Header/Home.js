@@ -85,7 +85,6 @@ const Home = () => {
   const [newBook, setNewBook] = useState({ title: "", author: "" });
   const [editIndex, setEditIndex] = useState(null);
 
-  // Fetch books from API
   useEffect(() => {
     const fetchBooks = async () => {
       try {
@@ -102,7 +101,6 @@ const Home = () => {
     fetchBooks();
   }, []);
 
-  // Search functionality
   const changeHandler = (e) => {
     const value = e.target.value.toLowerCase();
     setSearch(value);
@@ -113,8 +111,7 @@ const Home = () => {
     setBooks(searchedData);
   };
 
-  // Add Book
-  const addBook = () => {
+const addBook = () => {
     if (!newBook.title || !newBook.author) {
       alert("Please provide book title and author");
       return;
@@ -124,13 +121,13 @@ const Home = () => {
     setNewBook({ title: "", author: "" });
   };
 
-  // Edit Book
+
   const editBook = (index) => {
     setEditIndex(index);
     setNewBook(books[index]);
   };
 
-  // Update Book
+  
   const updateBook = () => {
     const updatedBooks = [...books];
     updatedBooks[editIndex] = newBook;
@@ -140,7 +137,6 @@ const Home = () => {
     setNewBook({ title: "", author: "" });
   };
 
-  // Delete Book
   const deleteBook = (index) => {
     const updatedBooks = books.filter((_, i) => i !== index);
     setBooks(updatedBooks);
